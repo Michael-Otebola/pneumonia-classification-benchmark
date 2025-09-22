@@ -1,0 +1,23 @@
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore datasets
+data/
+raw_data/
+datasets/
+sample_data/raw/
+
+# Ignore outputs and checkpoints
+results/
+runs/
+outputs/
+*.pth
+*.pt
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
