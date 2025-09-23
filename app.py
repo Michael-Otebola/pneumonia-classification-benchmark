@@ -136,29 +136,32 @@ st.markdown("""
 # ---------------------------
 # Model Setup
 # ---------------------------
+import os
+
 @st.cache_resource
 def load_model():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    
+
     try:
-        # Load the state dict to inspect its structure
-        state_dict = torch.load("results/ResNet50.pth", map_location=device)
+        # Get absolute path relative to app.py
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        model_path = os.path.join(base_dir, "results", "ResNet50.pth")
+
+        # Load the state dict
+        state_dict = torch.load(model_path, map_location=device)
         
         # Determine the number of classes from the saved model
         if 'fc.0.weight' in state_dict:
-            # Sequential fc layer
             num_classes = state_dict['fc.0.weight'].shape[0]
             model = models.resnet50(weights=None)
             model.fc = nn.Sequential(
                 nn.Linear(model.fc.in_features, num_classes)
             )
         elif 'fc.weight' in state_dict:
-            # Single Linear fc layer
             num_classes = state_dict['fc.weight'].shape[0]
             model = models.resnet50(weights=None)
             model.fc = nn.Linear(model.fc.in_features, num_classes)
         else:
-            # Fallback to 2 classes
             num_classes = 2
             model = models.resnet50(weights=None)
             model.fc = nn.Linear(model.fc.in_features, num_classes)
@@ -166,18 +169,15 @@ def load_model():
         model.load_state_dict(state_dict)
         model = model.to(device)
         model.eval()
-        
-        # Update classes list based on detected number of classes
-        if num_classes == 1:
-            classes = ["PNEUMONIA"]  # Binary classification with single output
-        else:
-            classes = ["NORMAL", "PNEUMONIA"]
+
+        classes = ["NORMAL", "PNEUMONIA"] if num_classes > 1 else ["PNEUMONIA"]
         
         return model, device, classes, num_classes
-        
+
     except Exception as e:
         st.error(f"🔍 Detailed error: {str(e)}")
         raise e
+
 
 # ---------------------------
 # Grad-CAM Implementation
