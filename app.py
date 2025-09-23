@@ -145,7 +145,7 @@ def load_model():
     try:
         # Get absolute path relative to app.py
         base_dir = os.path.dirname(os.path.abspath(__file__))
-        model_path = os.path.join(base_dir, "results", "ResNet50.pth")
+        model_path = os.path.join(base_dir, "results", "resnet50.pth")
 
         # Load the state dict
         state_dict = torch.load(model_path, map_location=device)
