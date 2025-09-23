@@ -8,12 +8,6 @@ raw_data/
 datasets/
 sample_data/raw/
 
-# Ignore outputs and checkpoints
-results/
-runs/
-outputs/
-*.pth
-*.pt
 
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
