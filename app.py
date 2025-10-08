@@ -62,6 +62,26 @@ st.markdown("""
         box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         border-left: 4px solid #667eea;
         margin-bottom: 1rem;
+        color: #333; /* Ensure text is visible */
+    }
+    
+    .info-card h4 {
+        color: #2c3e50;
+        margin-top: 0;
+    }
+    
+    .info-card p {
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+    
+    .info-card small {
+        color: #777;
+    }
+    
+    .info-card ol li {
+        color: #555;
+        margin-bottom: 0.25rem;
     }
     
     .prediction-card {
@@ -119,6 +139,7 @@ st.markdown("""
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         text-align: center;
         margin: 0.5rem 0;
+        color: #333;
     }
     
     /* Progress bar styling */
