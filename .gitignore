@@ -1,13 +1,12 @@
 # Ignore virtual environments
 venv/
+.venv/
 .env/
 
-# Ignore datasets
+# Datasets (keep sample_data tracked)
 data/
 raw_data/
 datasets/
-sample_data/raw/
-
 
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
@@ -15,3 +14,12 @@ sample_data/raw/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Model and large files
+*.pth
+*.pt
+*.h5
+
+# Python cache
+__pycache__/
+*.pyc
