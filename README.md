@@ -111,19 +111,25 @@ The study also features a **Streamlit web app** for real-time inference and visu
 ### 🔹 2. Confusion Matrices by Model  
 | ResNet50 | DenseNet121 | VGG16 |
 |:--:|:--:|:--:|
-| ![ResNet50 CM](results/cm_resnet50.png) | ![DenseNet121 CM](results/cm_densenet.png) | ![VGG16 CM](results/cm_vgg16.png) |
+| ![ResNet50 CM](results/ResNet50_confusion_matrix.png) | ![DenseNet121 CM](results/densenet121_confusion_matrix.png) | ![VGG16 CM](results/VGG16/confusion_matrix.png) |
 
 ---
 
-### 🔹 3. ROC Curves  
-![ROC Curves](results/roc_curves.png)
+
+### 🔹 3. ROC & Precision-Recall Curves  
+
+| **ROC Curve** | **Precision-Recall Curve** |
+|:--:|:--:|
+| ![ROC Curve](results/roc_curve.png) | ![PR Curve](results/pr_curve.png) |
+
 
 ---
 
 ### 🔹 4. Grad-CAM Heatmaps  
+|:--:|:--:|
 | Normal | Pneumonia |
 |:--:|:--:|
-| ![Grad-CAM Normal](results/gradcam_normal.png) | ![Grad-CAM Pneumonia](results/gradcam_pneumonia.png) |
+| ![Grad-CAM Normal](results/gradcam.png) | ![Grad-CAM Pneumonia](results/gradcam.png) |
 
 ---
 
@@ -146,5 +152,43 @@ The study also features a **Streamlit web app** for real-time inference and visu
 ---
 
 ## 🗂️ Repository Layout  
+
+
+---
+
+## 💻 Run Locally  
+
+```bash
+git clone https://github.com/Michael-Otebola/pneumonia-classification-benchmark.git
+cd pneumonia-classification-benchmark
+pip install -r requirements.txt
+streamlit run app.py
+```
+## 🌐 View the Hosted Version  
+
+[![Launch Streamlit App](https://img.shields.io/badge/🚀_Launch_App-Streamlit-ff4b4b?style=for-the-badge&logo=streamlit)](https://pneumonia-classification-benchmark.streamlit.app/)
+
+---
+
+## ✍️ Author  
+
+**👤 Michael Otebola**  
+*Data Scientist & AI Researcher*  
+
+📧 **Email:** michaelotegbola01@gmail.com  
+🌍 *AI for Healthcare & Transformative Innovation in Africa*  
+
+[![LinkedIn](https://img.shields.io/badge/Connect-blue?logo=linkedin&style=flat-square)]([[https://www.linkedin.com/in/michael-otegbola](https://www.linkedin.com/in/michael-otegbola-269b8324a/)](https://www.linkedin.com/in/michael-otegbola-269b8324a/))
+
+---
+
+## 📚 References  
+
+- He et al. — *Deep Residual Learning for Image Recognition (ResNet)*  
+- Huang et al. — *Densely Connected Convolutional Networks (DenseNet)*  
+- Simonyan & Zisserman — *Very Deep Convolutional Networks (VGG)*  
+- Szegedy et al. — *Rethinking the Inception Architecture for Computer Vision*  
+- Rajpurkar et al. — *CheXNet: Radiologist-level Pneumonia Detection with Deep Learning*  
+
 
 
