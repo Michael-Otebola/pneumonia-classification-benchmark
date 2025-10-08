@@ -6,7 +6,7 @@
 <div align="center">
   
 [![View Streamlit App](https://img.shields.io/badge/🔗_Open%20App-Streamlit-blue?style=for-the-badge&logo=streamlit)](https://pneumonia-classification-benchmark.streamlit.app/)
-[![Connect on LinkedIn](https://img.shields.io/badge/👤_Michael%20Otebola-LinkedIn-darkblue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/michael-otegbola)
+[![Connect on LinkedIn](https://img.shields.io/badge/👤_Michael%20Otebola-LinkedIn-darkblue?style=for-the-badge&logo=linkedin)]([https://www.linkedin.com/in/michael-otegbola](https://www.linkedin.com/in/michael-otegbola-269b8324a/))
 
 </div>
 
@@ -146,4 +146,5 @@ The study also features a **Streamlit web app** for real-time inference and visu
 ---
 
 ## 🗂️ Repository Layout  
+
 
