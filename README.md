@@ -1,6 +1,11 @@
 # 🩺 Pneumonia Classification Benchmark  
 *A Comparative Study of CNN Architectures for Chest X-Ray Pneumonia Detection*
 
+<p align="center">
+  <img src="results/over3.jpg" alt="Pneumonia Classification Benchmark Overview" width="850"/>
+</p>
+
+
 ---
 
 <div align="center">
@@ -189,6 +194,7 @@ streamlit run app.py
 - Simonyan & Zisserman — *Very Deep Convolutional Networks (VGG)*  
 - Szegedy et al. — *Rethinking the Inception Architecture for Computer Vision*  
 - Rajpurkar et al. — *CheXNet: Radiologist-level Pneumonia Detection with Deep Learning*  
+
 
 
 
